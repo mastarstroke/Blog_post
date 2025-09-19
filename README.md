@@ -112,7 +112,7 @@ The JWT token is stored in the Laravel session to use in AJAX headers for protec
 A Postman collection with all endpoints is included in the repository at:
 
 ```
-docs/LaravelJWTBlog.postman_collection.json
+LaravelJWTBlog.postman_collection.json
 ```
 
 Import this file into Postman to test all endpoints quickly.
@@ -129,10 +129,6 @@ Import this file into Postman to test all endpoints quickly.
 4. Run `php artisan jwt:secret`  
 5. Start server with `php artisan serve`  
 6. Visit `http://127.0.0.1:8000/register` to register and log in  
-7. Manage posts from **Dashboard**
+7. Add posts from **Dashboard**
 
 ---
-
-## 📄 License
-
-MIT License
