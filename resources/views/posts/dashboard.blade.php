@@ -32,7 +32,7 @@ $(function () {
             url: '/api/posts',
             method: 'POST',
             headers: {
-                'Authorization': 'Bearer {{ session('jwt') }}' // put your JWT in session after login
+                'Authorization': 'Bearer {{ session('jwt') }}'
             },
             data: $(this).serialize(),
             success: function() {
