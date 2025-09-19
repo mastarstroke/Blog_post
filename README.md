@@ -25,7 +25,7 @@ Features:
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/laravel-jwt-blog.git
+git clone https://github.com/mastarstroke/Blog_post
 cd laravel-jwt-blog
 ```
 
