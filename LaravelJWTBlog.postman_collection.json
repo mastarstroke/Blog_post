@@ -1,0 +1,213 @@
+{
+    "info": {
+        "name": "Laravel JWT Blog API",
+        "_postman_id": "uuid-here",
+        "description": "Postman collection for Laravel 10 JWT Blog API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Auth",
+            "item": [
+                {
+                    "name": "Register",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"Test User\",\n    \"email\": \"test@example.com\",\n    \"password\": \"password\",\n    \"password_confirmation\": \"password\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/auth/register",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "auth",
+                                "register"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Login",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\": \"test@example.com\",\n    \"password\": \"password\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/auth/login",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "auth",
+                                "login"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Posts",
+            "item": [
+                {
+                    "name": "List Posts",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/posts?search=keyword&page=1",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "posts"
+                            ],
+                            "query": [
+                                {
+                                    "key": "search",
+                                    "value": "keyword"
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "View Single Post",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{base_url}}/api/posts/1",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "posts",
+                                "1"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Create Post",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token}}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"title\": \"My first post\",\n    \"body\": \"This is the body\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/posts",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "posts"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Update Post",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token}}"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"title\": \"Updated title\",\n    \"body\": \"Updated body\"\n}"
+                        },
+                        "url": {
+                            "raw": "{{base_url}}/api/posts/1",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "posts",
+                                "1"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Delete Post",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer {{token}}"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{base_url}}/api/posts/1",
+                            "host": [
+                                "{{base_url}}"
+                            ],
+                            "path": [
+                                "api",
+                                "posts",
+                                "1"
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "http://127.0.0.1:8000"
+        },
+        {
+            "key": "token",
+            "value": ""
+        }
+    ]
+}
