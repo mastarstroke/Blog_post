@@ -27,10 +27,6 @@ class AuthPageController extends Controller
     public function logout(Request $request)
     {
         $request->session()->forget('jwt');
-
-        // If you’re also using Laravel’s native auth:
-        // auth()->logout();
-
         return redirect('/'); 
     }
 
