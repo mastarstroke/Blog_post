@@ -19,7 +19,7 @@
 
                 <form action="{{ route('logout') }}" method="POST" style="display:inline;">
                     @csrf
-                    <button type="submit" class="btn btn-outline-light btn-sm">Logout</button>
+                    <button type="submit" class="btn btn-outline-danger btn-sm">Logout</button>
                 </form>
             @else
                 <a class="btn btn-outline-light btn-sm" href="{{ route('login') }}">Login</a>
