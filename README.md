@@ -117,7 +117,7 @@ docs/LaravelJWTBlog.postman_collection.json
 
 Import this file into Postman to test all endpoints quickly.
 
-[Download the Postman collection here](docs/LaravelJWTBlog.postman_collection.json)
+[Download the Postman collection here](LaravelJWTBlog.postman_collection.json)
 
 ---
 
