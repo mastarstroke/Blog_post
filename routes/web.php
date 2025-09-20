@@ -15,7 +15,5 @@ Route::post('/save-token', [AuthPageController::class, 'saveToken'])->name('save
 Route::get('/', [PostPageController::class, 'index'])->name('posts.list'); 
 Route::get('/posts/{id}', [PostPageController::class, 'show'])->name('posts.show');
 
-Route::get('/dashboard', [PostPageController::class, 'dashboard'])
-    ->name('posts.dashboard')
-    ->middleware('jwt.session');
+Route::get('/dashboard', [PostPageController::class, 'dashboard'])->name('posts.dashboard')->middleware('jwt.session');
 

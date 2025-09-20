@@ -40,7 +40,8 @@ $(function () {
                         _token: '{{ csrf_token() }}',
                         token: token
                     }).done(function() {
-                        $('#result').html('<div class="alert alert-success">Logged in! <a href="/">Go to Home</a></div>');
+                        $('#result').html('<div class="alert alert-success">Logged in!</div>');
+                        window.location.href = "{{ route('posts.dashboard') }}";
                     });
                 } else {
                     $('#result').html('<div class="alert alert-danger">No token returned</div>');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
+use Illuminate\Http\Request;
 use App\Http\Resources\PostResource;
 use App\Models\Post;
 use App\Services\PostService;
@@ -29,6 +30,16 @@ class PostController extends Controller
 
         return PostResource::collection($posts);
     }
+
+    public function userPosts(Request $request)
+    {
+        $posts = Post::where('user_id', $request->user()->id)
+            ->latest()
+            ->get();
+
+        return PostResource::collection($posts);
+    }
+
 
 
     // Public: view single post
