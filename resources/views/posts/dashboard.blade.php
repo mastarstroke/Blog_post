@@ -54,7 +54,7 @@
   </div>
 </div>
 
-{{-- Edit Modal (same as before) --}}
+{{-- Edit Modal --}}
 <div class="modal fade" id="editModal" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">

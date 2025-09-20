@@ -40,8 +40,6 @@ class PostController extends Controller
         return PostResource::collection($posts);
     }
 
-
-
     // Public: view single post
     public function show(Post $post)
     {
