@@ -129,6 +129,6 @@ Import this file into Postman to test all endpoints quickly.
 4. Run `php artisan jwt:secret`  
 5. Start server with `php artisan serve`  
 6. Visit `http://127.0.0.1:8000/register` to register and log in  
-7. Add posts from **Dashboard**
+7. Manage posts from **Dashboard**
 
 ---
